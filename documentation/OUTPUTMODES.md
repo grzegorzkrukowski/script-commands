@@ -28,6 +28,8 @@ We support colors for `inline` and `fullOutput` mode scripts for you to customis
 
 Escape code is in linux format: `0x1B`
 
+## 3-bit colors (8-color mode)
+
 Colors are adapted to current users apperance settings (light and dark themes)
 | Color | # Foreground | # Background | Light | Dark |
 | ------ | ------------ | ------------ | ----- | ---- |
@@ -40,7 +42,24 @@ Colors are adapted to current users apperance settings (light and dark themes)
 | Cyan | 36 | 46 | #3EB8BF | #52EEE5 |
 | White | 97 | 107 | #FFFFFF | #FFFFFF |
 
-**Other supported codes:**
+## 8-bit colors (256-color mode)
+https://en.wikipedia.org/wiki/ANSI_escape_code#8-bit
+
+`38;5;⟨n⟩m` - Select 8-bit foreground color
+
+`48;5;⟨n⟩m` - Select 8-bit background color
+
+![image](https://user-images.githubusercontent.com/1301068/114558204-bc076600-9c6a-11eb-806a-ab07ddf0d290.png)
+
+## 24-bit colors (TrueColor mode)
+https://en.wikipedia.org/wiki/ANSI_escape_code#24-bit
+
+`38;2;⟨r⟩;⟨g⟩;⟨b⟩m` - Select RGB foreground color
+
+`48;2;⟨r⟩;⟨g⟩;⟨b⟩m` - Select RGB background color
+
+
+## Other supported codes
 
 | Code | Name |
 | ---- | ---- |
