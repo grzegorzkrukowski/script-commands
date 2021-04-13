@@ -76,7 +76,9 @@ https://en.wikipedia.org/wiki/ANSI_escape_code#24-bit
 ![colors inline mode](/images/screenshots/colour-example.png)
 | Script | Code |
 | ------ | ---- |
-| bash | `echo -e '\\033[31;42mred text on green background\\033[0m'` |
-| bash tput | `export TERM=linux; echo "$(tput setaf 1)$(tput setab 2)red text on green background$(tput sgr0)";` |
-| swift | `print("\\u{001B}[31;42mred text on green background\\u{001B}[0m")` |
-| osascript | `do shell script "echo '\\033[31;42mred text on green background\\033[0m'"`|
+| bash (3-bit) | `echo -e '\033[31;42mred text on green background\033[0m'` |
+| bash (8-bit) | `echo -e '\033[38;5;196m\033[48;5;70mred text on green background\033[0m'` |
+| bash (24-bit) | `echo -e '\033[38;2;255;0;0m\033[48;2;0;255;0mred text on green background\033[0m'` |
+| bash tput (8-bit) | `export TERM=linux; echo "$(tput setaf 1)$(tput setab 2)red text on green background$(tput sgr0)";` |
+| swift (8-bit) | `print("\\u{001B}[31;42mred text on green background\\u{001B}[0m")` |
+| osascript (8-bit) | `do shell script "echo '\\033[31;42mred text on green background\\033[0m'"`|
